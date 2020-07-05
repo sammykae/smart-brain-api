@@ -11,7 +11,7 @@ const knex=require('knex')
 const db =knex({
     client: 'pg',
     connection: {
-        connectionString : process.env.DATABASE_URL,
+        connectionString : 'postgresql-graceful-36884',
         ssl: true,
     }
 })
