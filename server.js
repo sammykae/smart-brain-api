@@ -6,16 +6,16 @@ const signin=require('./controllers/signin')
 const profile=require('./controllers/profile')
 const image=require('./controllers/image')
 const cors=require('cors')
-const app = express();
+
 const knex=require('knex')
 const db =knex({
-    client:'pg',
-    connection:{
-        connectionString:process.env.DATABASE_URL,
-        ssl:true,
+    client: 'pg',
+    connection: {
+        connectionString: process.env.DATABASE_URL,
+        ssl: true,
     }
 })
-
+const app = express()
 
 app.use(bodyParser.json())
 app.use(cors())
